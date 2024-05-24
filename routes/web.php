@@ -16,3 +16,5 @@ use App\Http\Controllers\ProductController;
 
 Route::redirect('/', '/products'); 
 Route::resource('products', ProductController::class)->names('products');
+
+Route::get('test-env', [ProductController::class, 'testFuction']);

@@ -80,4 +80,11 @@ class ProductController extends Controller
         Product::where('id', $id)->delete();
         return response()->redirectTo('products')->with('message', 'Product Deleted Successfully.');
     }
+
+    public function testFuction(){
+        return [
+            'app_url' => env('APP_URL'),
+            'asset_url' => env('ASSET_URL'),
+        ];
+    }
 }
